@@ -17,6 +17,12 @@ describe('Teste da página do carrinho', () => {
     it('Deve exibir o produto no carrinho', () => {
     cy.get('.inventory_item_name').should('have.text', 'Sauce Labs Backpack')
     })
+
+    // Remover produto do carrinho
+    it('Deve remover o produto do carrinho', () => {
+    CarrinhoPage.removerProduto()
+    cy.get('inventory_item_name').should('not.exist')
+    })
    
     
 })
