@@ -13,7 +13,7 @@ describe('Teste da página do carrinho', () => {
         CarrinhoPage.acessarCarrinho()
     })
  
-     // Validar que o produto aparece no carrinho
+    // Validar produto no carrinho
     it('Deve exibir o produto no carrinho', () => {
     cy.get('.inventory_item_name').should('have.text', 'Sauce Labs Backpack')
     })
